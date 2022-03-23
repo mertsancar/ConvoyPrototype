@@ -18,6 +18,7 @@ public class Limo : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Destroy(other.gameObject);
         health--;
         UIManager._instance.UpdateLimoHealthText(health);
         if (health == 0)
