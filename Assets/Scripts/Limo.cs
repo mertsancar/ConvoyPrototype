@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Limo : MonoBehaviour
 {
-    private int health = 2;
+    public int health = 2;
 
     void Start()
     {
-
     }
 
     void Update()
     {
-
+        if (transform.position.y < -10f)
+        {
+            Destroy(gameObject);
+            UIManager._instance.UpdateLimoHealthText(0);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,8 +26,7 @@ public class Limo : MonoBehaviour
         UIManager._instance.UpdateLimoHealthText(health);
         if (health == 0)
         {
-            Destroy(gameObject);
-            Debug.Log("Limo - OnTriggerEnter() : Game Over!");
+            Destroy(other.gameObject);
         }
     }
 }

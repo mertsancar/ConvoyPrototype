@@ -16,7 +16,7 @@ public class CameraMovement : MonoBehaviour
         private Vector3 animation_off_set = new Vector3(0, 5, 5);
         void Start()
         {
-            look_at = player.transform;
+            look_at = player.transform.GetChild(0).transform;
             start_off_set = transform.position - look_at.position;
             minforClamp = transform.position.y;
             minforClamp = transform.position.y + 5;
@@ -25,6 +25,11 @@ public class CameraMovement : MonoBehaviour
 
         void Update()
         {
+            
+            if (UIManager._instance.gameOverPanel.activeSelf || UIManager._instance.youWinPanel.activeSelf)
+            {
+                return;
+            }
             Camera_Move();
         }
 

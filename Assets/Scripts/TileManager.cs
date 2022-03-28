@@ -6,11 +6,11 @@ public class TileManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject[] tilePreFabs;
-    private float spawn_Z = 40.0f;
+    private float spawn_Z = 0.0f;
     private float safe_zone = 80.0f;
     private float tile_lenght = 110f;
-    private int amount_tile_on_screen = 3;
-
+    private int amount_tile_on_screen = 6;
+    private int emptyWayCounter = 0;
 
     private Transform player_transform;
 
@@ -20,21 +20,18 @@ public class TileManager : MonoBehaviour
     void Start()
     {
         active_tiles = new List<GameObject>();
-        player_transform = player.transform;
+        player_transform = player.transform.GetChild(0).transform;
 
+        SpawnTile(0);
         for (int i = 0; i < amount_tile_on_screen; i++) 
         {
-
-            //if (i < 3)
+            SpawnTile(i);
+            //if(i == amount_tile_on_screen/2)
             //{
             //    SpawnTile(0);
+            //    continue;
             //}
-            //else
-            //{
-            //    SpawnTile(Random.Range(1, 3));
-            //}
-            SpawnTile(i);
-
+            //SpawnTile(Random.Range(1, tilePreFabs.Length - 1));
 
         }
 
@@ -42,10 +39,22 @@ public class TileManager : MonoBehaviour
 
     void Update()
     {
+        if (UIManager._instance.gameOverPanel.activeSelf || UIManager._instance.youWinPanel.activeSelf)
+        {
+            return;
+        }
         if (player_transform.position.z - safe_zone > (spawn_Z - amount_tile_on_screen * tile_lenght))
         {
             DeleteTile();
-            SpawnTile(Random.Range(0, 3));
+            if (emptyWayCounter < 3)
+            {
+                SpawnTile(Random.Range(1, tilePreFabs.Length - 1));
+            }
+            else
+            {
+                SpawnTile(0);
+                emptyWayCounter = 0;
+            }
         }
     }
 

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AE35899A-EC50-9782-E1E9-7BAFBE5E3861}</ProjectGuid>
+    <ProjectGuid>{15902C78-6190-838C-3C18-D92550220356}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.Notifications.iOS</AssemblyName>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\AuthorizationRequest.cs" />
     <Compile Include="Library\PackageCache\com.unity.mobile.notifications@1.4.2\Runtime\iOS\iOSNotificationCenter.cs" />
@@ -653,11 +656,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{C0969FA1-0EBA-3266-67F3-ED47E758EB80}</Project>
+      <Project>{99BF35CA-D6D7-654E-D387-9243E6108958}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{AF0AF8C5-9BC0-91A9-F491-407C0E1A2462}</Project>
+      <Project>{2D6E94C8-7468-313A-D31D-0EA62BC42E6D}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

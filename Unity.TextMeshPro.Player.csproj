@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C06B52F4-2835-F1E1-60BC-08A37FFBD9CA}</ProjectGuid>
+    <ProjectGuid>{19D0306B-1CC9-5509-C98C-27573CD5212B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.TextMeshPro</AssemblyName>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2020.3.27f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts\Runtime\TMP_InputField.cs" />
     <Compile Include="Library\PackageCache\com.unity.textmeshpro@3.0.6\Scripts\Runtime\TMP_TextProcessingStack.cs" />
@@ -657,7 +660,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{AF0AF8C5-9BC0-91A9-F491-407C0E1A2462}</Project>
+      <Project>{2D6E94C8-7468-313A-D31D-0EA62BC42E6D}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{90EBE99B-EC53-7BAB-C3AC-34B91EA10F0A}</ProjectGuid>
+    <ProjectGuid>{C8225340-7FFF-CBEF-29B4-AE9BDC9208AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -72,7 +72,7 @@
     <Compile Include="Assets\Scripts\Limo.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
-    <Compile Include="Assets\Scripts\NpcCar.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
@@ -83,11 +83,12 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
-    <Compile Include="Assets\ScreenManager.cs" />
+    <Compile Include="Assets\Scripts\ScreenManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
@@ -691,19 +692,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{E81AB6C9-F3BA-4A97-30E9-D13EB5888605}</Project>
+      <Project>{E7F13605-0810-BC37-D7AA-301AEABD3690}</Project>
       <Name>Unity.Timeline</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{5E2B0EE1-A899-2E81-E295-5DE5D4314E31}</Project>
+      <Project>{DACB0894-48F6-18B4-5F17-452515EC9240}</Project>
       <Name>Unity.TextMeshPro</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{AF0AF8C5-9BC0-91A9-F491-407C0E1A2462}</Project>
+      <Project>{2D6E94C8-7468-313A-D31D-0EA62BC42E6D}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Notifications.Android.csproj">
-      <Project>{75C26952-8749-452A-516F-D9A77B725503}</Project>
+      <Project>{C88C760F-D515-E42B-97FB-497E2CFFE2A8}</Project>
       <Name>Unity.Notifications.Android</Name>
     </ProjectReference>
   </ItemGroup>

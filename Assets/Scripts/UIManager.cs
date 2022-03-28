@@ -15,7 +15,8 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        //gameOverPanel.SetActive(false);
+        gameOverPanel.SetActive(false);
+        youWinPanel.SetActive(false);
     }
 
     void Start()
@@ -42,6 +43,7 @@ public class UIManager : MonoBehaviour
         if (newHealth <= 0)
         {
             GameOverScreen();
+            healthText.text = "Limo Health: 0";
         }
         healthText.text = "Limo Health: " + newHealth;
     }

@@ -5,11 +5,11 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public GameObject player;
-    private float score;
-    private float difficulty_level = 1;
-    private float max_difficulty_level = 100;
-    private float finalLevel = 100;
-    private int score_to_next_level = 3;
+    private float score = 0.0f;
+
+    private int difficulty_level = 1;
+    private int max_difficulty_level = 500;
+    private int score_to_next_level = 5;
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class LevelManager : MonoBehaviour
 
     void Update()
     {
-        if (score >= finalLevel)
+        if (score >= max_difficulty_level)
         {
             UIManager._instance.YouWinScreen();
             return;
@@ -46,6 +46,6 @@ public class LevelManager : MonoBehaviour
         score_to_next_level *= 2;
         difficulty_level++;
 
-        player.GetComponent<PlayerMovement>().SetSpeed(difficulty_level);
+        //player.transform.GetChild(0).GetComponent<PlayerMovement>().SetSpeed(difficulty_level);
     }
 }
