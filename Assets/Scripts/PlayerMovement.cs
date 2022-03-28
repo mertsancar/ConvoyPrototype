@@ -46,6 +46,44 @@ public class PlayerMovement : MonoBehaviour
     }
     void Forward()
     {
+
+        move_vector.x = Input.GetAxisRaw("Horizontal") * Speed;
+
+        // Dokunmatik ekran butonsuz
+        if (Input.GetMouseButton(0))
+        {
+            if (Input.mousePosition.x > Screen.width / 2)
+            {
+                move_vector.x = Speed;
+                var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, 30f, transform.eulerAngles.z);
+                transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * 10f);
+            }
+            else
+            {
+                move_vector.x = -Speed;
+                var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, -30f, transform.eulerAngles.z);
+                transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * 10f);
+            }
+        }
+        else
+        {
+            var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
+            transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * 10f);
+        }
+
+        // Ýleri (Z)
+        move_vector.z = Speed;
+
+        controller.Move((move_vector * Speed) * Time.deltaTime);
+    }
+
+    public void SetSpeed(float difficulty_level)
+    {
+        Speed = Speed + 1f; //+ difficulty_level
+    }
+
+    public void SetRotation()
+    {
         if (Input.GetAxisRaw("Horizontal") > 0)
         {
             var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, 30f, transform.eulerAngles.z);
@@ -62,32 +100,6 @@ public class PlayerMovement : MonoBehaviour
             var desiredRotQ = Quaternion.Euler(transform.eulerAngles.x, 0f, transform.eulerAngles.z);
             transform.rotation = Quaternion.Lerp(transform.rotation, desiredRotQ, Time.deltaTime * 10f);
         }
-
-        move_vector.x = Input.GetAxisRaw("Horizontal") * Speed;
-
-        //// Dokunmatik ekran butonsuz
-        //if (Input.GetMouseButton(0))
-        //{
-        //    if (Input.mousePosition.x > Screen.width / 2)
-        //    {
-        //        move_vector.x = Speed;
-        //    }
-        //    else
-        //    {
-        //        move_vector.x = -Speed;
-        //    }
-        //}
-
-        // Ýleri (Z)
-        move_vector.z = Speed;
-
-        controller.Move((move_vector * Speed) * Time.deltaTime);
     }
-
-    public void SetSpeed(float difficulty_level)
-    {
-        Speed = Speed + 1f; //+ difficulty_level
-    }
-
 
 }

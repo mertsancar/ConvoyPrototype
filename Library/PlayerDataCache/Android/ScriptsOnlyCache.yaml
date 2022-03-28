@@ -887,4 +887,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/User/Software/Unity/BratGames/Build/BratGamesPrototype_v2.0.0.apk
+  playerPath: C:/Users/User/Software/Unity/BratGames/Build/BratGamesPrototype_v2.0.1.apk
