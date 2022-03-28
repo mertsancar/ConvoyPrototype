@@ -6,7 +6,7 @@ Unity Version : 2020.3.27f1
 Pics:
 
 
-<img src="https://user-images.githubusercontent.com/57791061/160361750-9f9085d6-d0a6-4b6e-8247-6f1f045bc1b8.jpeg" width="4800" height="640">
+<img src="https://user-images.githubusercontent.com/57791061/160361750-9f9085d6-d0a6-4b6e-8247-6f1f045bc1b8.jpeg" width="480" height="640">
 
 <img src="https://user-images.githubusercontent.com/57791061/160361786-c7c2d2d8-c5a8-4d6c-9733-7a507fd22b3d.jpeg" width="250" height="660">
 
